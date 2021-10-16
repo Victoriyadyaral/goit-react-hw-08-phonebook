@@ -1,0 +1,31 @@
+.UserMenuWrap {
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    margin-right: 4px;
+}
+
+.email {
+    font-weight: 700;
+    margin-right: 12px;
+}
+
+.button {
+    display: inline-block;
+    text-decoration: none;
+    padding: 12px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #0b441e;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.button:hover,
+.button:focus {
+  color: #07b44f;
+  cursor: pointer;
+}

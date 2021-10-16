@@ -2,7 +2,8 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
-import  authSelectors from '../../redux/auth/auth-selectors';
+import authSelectors from '../../redux/auth/auth-selectors';
+import s from './Navigation.module.css';
 
 const Navigation = () => {
 
@@ -10,7 +11,12 @@ const Navigation = () => {
 
   return (
     <nav>
-      <NavLink to="/" exact>
+      <NavLink
+        to="/"
+        exact
+        className={s.link}
+        activeClassName={s.activeLink}
+      >
         Home
       </NavLink>
 
@@ -18,8 +24,8 @@ const Navigation = () => {
           <NavLink
             to="/contacts"
             exact
-          //   style={styles.link}
-          //   activeStyle={styles.activeLink}
+            className={s.link}
+            activeClassName={s.activeLink}
           >
             Contacts
           </NavLink>

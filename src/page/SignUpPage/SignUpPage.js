@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import  authOperations from '../../redux/auth/auth-operations';
+import authOperations from '../../redux/auth/auth-operations';
+import s from './SignUpPage.module.css';
 
 export default function SignUpPage() {
   const dispatch = useDispatch();
@@ -36,10 +37,12 @@ export default function SignUpPage() {
           <form
               onSubmit={handleSubmit}
               autoComplete="off"
+              className={s.form}
           >
-        <label>
+        <label className={s.label}>
           Name
            <input
+            className={s.input}
             type="text"
             name="name"
             value={name}
@@ -47,9 +50,10 @@ export default function SignUpPage() {
             />
         </label>
 
-        <label>
+        <label className={s.label}>
           E-mail
           <input
+            className={s.input}
             type="email"
             name="email"
             value={email}
@@ -57,9 +61,10 @@ export default function SignUpPage() {
           />
         </label>
 
-        <label >
+        <label  className={s.label}>
           Password
           <input
+            className={s.input}
             type="password"
             name="password"
             value={password}
@@ -67,7 +72,7 @@ export default function SignUpPage() {
           />
         </label>
 
-        <button type="submit">Sign up</button>
+        <button type="submit" className={s.button}>Sign up</button>
       </form>
     </div>
   );
