@@ -6,7 +6,6 @@ import phonebookActions from './actions';
 const contacts = createReducer([], {
   [phonebookActions.fetchContactsSuccess]: (_, { payload }) => payload,
   [phonebookActions.addContactSuccess]: (state, { payload }) => {
-    //toast.success('Contact has been added to your phonebook!');
     return [...state, payload]
   },
   [phonebookActions.deleteContactSuccess]: (state, { payload }) => {

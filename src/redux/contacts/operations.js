@@ -1,8 +1,9 @@
 import axios from 'axios';
-import shortid from 'shortid';
 import phonebookActions from './actions';
 
-axios.defaults.baseURL = 'http://localhost:4040';
+//axios.defaults.baseURL = 'http://connections-api.herokuapp.com';
+
+//axios.defaults.baseURL = 'http://localhost:3000';
 
 const fetchContacts = () => async dispatch => {
   dispatch(phonebookActions.fetchContactsRequest());
@@ -18,7 +19,6 @@ const fetchContacts = () => async dispatch => {
 
 const addContact = (name, number) => async dispatch => {
   const contact = {
-    id: shortid.generate(),
     name,
     number,
   };

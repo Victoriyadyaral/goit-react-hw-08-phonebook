@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { ImBin, ImRadioChecked2 } from "react-icons/im";
 import { useDispatch } from 'react-redux';
-import contactsOperations from '../../redux/operations';
+import contactsOperations from '../../redux/contacts/operations';
 import s from "./ContactListItem.module.css";
 
 const ContactListItem = ({ id, name, number }) => {

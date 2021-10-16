@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
 import s from "./ContactList.module.css";
 
-import { getVisibleContacts } from '../../redux/selectors';
+import { getVisibleContacts } from '../../redux/contacts/selectors';
 import ContactListItem from '../contactListItem/ContactListItem';
 
 const ContactList = () => {

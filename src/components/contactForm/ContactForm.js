@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
-import contactOperations from '../../redux/operations';
-import { getContacts } from '../../redux/selectors';
+import contactOperations from '../../redux/contacts/operations';
+import { getContacts } from '../../redux/contacts/selectors';
 import shortid from 'shortid';
 import { ImCheckmark } from "react-icons/im";
 import s from "./ContactForm.module.css";

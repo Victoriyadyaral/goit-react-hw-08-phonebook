@@ -3,14 +3,18 @@ import React from 'react';
 import { ToastContainer } from 'react-toastify';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
+import { Switch, Route } from 'react-router-dom';
 import 'react-toastify/dist/ReactToastify.css';
 //import { isLoading } from './redux/selectors';
-import contactOperations from './redux/operations';
+
 import Container from './components/container/Container';
-import ContactForm from './components/contactForm/ContactForm';
-import Filter from './components/filter/Filter';
-import ContactList from './components/contactList/ContactList';
+import NavBar from './components/navBar/NavBar';
+import HomePage from './page/HomePage/HomePage';
+import SignUpPage from './page/SignUpPage/SignUpPage';
+import LoginPage from './page/LoginPage/LoginPage';
+import ContactsPage from './page/ContactsPage/ContactsPage';
 //import Loader from './components/Loader/Loader';
+import contactOperations from './redux/contacts/operations';
 
 function App() {
   //const loading = useSelector(isLoading);
@@ -22,8 +26,6 @@ function App() {
 
     return (
       <Container>
-        <h1>Phonebook</h1>
-        <ContactForm/>
         <ToastContainer
           position="top-right"
           autoClose={3000}
@@ -34,11 +36,16 @@ function App() {
           pauseOnFocusLoss
           draggable
           pauseOnHover
-          />
-        <h2>Contacts</h2>
-        <Filter />
-        {/* {loading && <Loader />} */}
-        <ContactList/>
+        />
+        
+        <NavBar />
+
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+        <Route path="/signup" component={SignUpPage} />
+        <Route path="/login" component={LoginPage} />
+        <Route path="/contacts" component={ContactsPage} />
+      </Switch>
      </Container>
     );
   }
