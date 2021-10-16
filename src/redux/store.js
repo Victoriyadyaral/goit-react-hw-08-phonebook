@@ -39,6 +39,7 @@ const persistor = persistStore(store);
 const allElementOfStore = { store, persistor };
 
 //{name: "dgfdghjghjm", email: "fsdzgdfhg@xcvfdhgfh.com", password: "fvfsdhgfdgjghjkghk"}
-
+// dgfdhfghjg@gmail.com  
+//dgfdhfghjg@gmail.com 
 
 export default allElementOfStore;
