@@ -28,7 +28,13 @@ function App() {
     dispatch(authOperations.fetchCurrentUser());
   }, [dispatch]);
 
-    return (
+  return (
+  <>
+       {isFetchingCurrentUser ? (
+          <h1>Refreshing...</h1>
+         ) : (
+        <>
+      <NavBar />
       <Container>
         <ToastContainer
           position="top-right"
@@ -41,12 +47,6 @@ function App() {
           draggable
           pauseOnHover
         />
-        
-        {isFetchingCurrentUser ? (
-          <h1>Refreshing...</h1>
-         ) : (
-        <>
-        <NavBar />
 
         <Switch>
           <Suspense fallback={<Loader />}>
@@ -64,9 +64,10 @@ function App() {
               </PrivateRoute>
           </Suspense>
          </Switch>
-        </>
-      )}  
-     </Container>
+      </Container>
+    </>
+      )}
+ </>     
     );
   }
 

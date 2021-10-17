@@ -1,7 +1,14 @@
 .header {
-    display: flex;
     padding: 10px 0;
+    background-color: rgb(192, 235, 213);
+}
+
+.container {
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(192, 235, 213);
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 15px;
 }

@@ -1,7 +1,6 @@
 .homePageWrap {
     height: 100vh;
     background-image: url("../../icon/phone.jpg");
-    background-color:#fafcfc;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 60%;
@@ -10,5 +9,5 @@
 .homePageTitle {
     padding-top: 40px;
     margin: 0;
-    font-size: 66px;
+    font-size: 56px;
 }
